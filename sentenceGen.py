@@ -41,7 +41,7 @@ def filterArchaic(words):
 def extractSentence(element):
     sentence = ""
     for child in element.itertext():
-        sentence += child.strip().replace('\n', ' ') + " "
+        sentence += child.replace('\n', ' ')
     return sentence
 
 #TODO: nasty; make independent of reverso page structure/use hypothetical api. Also would need to change per language; could make base url injectable with formattable string
